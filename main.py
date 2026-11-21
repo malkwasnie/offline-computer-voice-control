@@ -10,6 +10,7 @@ import pyperclip as pc
 
 #Initializing the model myModel
 myModel = WhisperModel("small", device="cpu", compute_type="int8")
+llmModel = "qwen2.5:0.5b"
 
 SYSTEM_PROMPT = """
 Jestes asystentem sterujacym komputerem. Twoim jedynym zadaniem jest zamiana polecenia glosowego uzytkownika na obiekt JSON.
@@ -80,7 +81,7 @@ def GetJSONFromPrompt(text):
 
     #sending text to myModel and getting response
     response = ollama.chat(
-        model = "qwen2.5:0.5b",
+        model = llmModel,
         format = "json",
         messages = [
             {"role": "system", "content": SYSTEM_PROMPT},
@@ -164,18 +165,28 @@ def ExecuteCommand(jsonResponse):
         print("Nieznana akcja:", akcja)
 
 
-try:
-    while True:
-        input("\nWcisnij ENTER, aby wydac komende glosowe (lub CTRL+C, aby zakonczyc): ")
+if __name__ == "__main__":
+    # Initializing the model myModel
+    myModel = WhisperModel("small", device="cpu", compute_type="int8")
 
-        audioData = RecordAudio()
-        tekst = TranscribeAudio(audioData)
-        print("Rozpoznany tekst: ", tekst)
+    try:
+        while True:
+            input(
+                "\nWcisnij ENTER, aby wydac komende glosowe (lub CTRL+C, aby zakonczyc): "
+            )
 
-        jsonResponse = GetJSONFromPrompt(tekst)
-        print("Decyzja: ", jsonResponse)
+            audioData = RecordAudio()
+            tekst = TranscribeAudio(audioData)
+            print("Rozpoznany tekst: ", tekst)
 
-        ExecuteCommand(jsonResponse)
+            if not tekst:
+                print("Nic nie uslyszalem, sprobuj ponownie.")
+                continue
 
-except KeyboardInterrupt:
-    print("\nDo zobaczenia potem!")
+            jsonResponse = GetJSONFromPrompt(tekst)
+            print("Decyzja: ", jsonResponse)
+
+            ExecuteCommand(jsonResponse)
+
+    except KeyboardInterrupt:
+        print("\nDo zobaczenia potem!")
