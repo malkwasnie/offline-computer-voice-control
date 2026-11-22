@@ -52,4 +52,5 @@ W trakcie prac wykorzystaliśmy **Gemini** jako wsparcie techniczne w celu:
 - **debugowania i rozwiązywania problemów technicznych** (m.in. obsługa niezgodności wersji bibliotek audio, bezpieczne parsowanie odpowiedzi JSON oraz oddelegowanie obliczeń matematycznych z małego modelu LLM do kodu Pythona),
 - **optymalizacji prompt engineeringu** (*few-shot prompting*) pod kątem małych modeli językowych (0.5B–1.5B parametrów),
 - **przyspieszenia nauki nowych narzędzi** i dobrych praktyk pracy z repozytorium Git.
-- **dokonanie testów** i napisanie kodu odpowiedzialnego za porównanie trzech modeli
+- **dokonanie testów** i napisanie kodu odpowiedzialnego za porównanie trzech modeli.
+- Przygotowanie materiałów demonstracyjny oraz wizualizacji.
