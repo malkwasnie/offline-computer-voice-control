@@ -43,6 +43,25 @@ Lokalny asystent głosowy do sterowania komputerem z systemem Windows, działaj�
 - *"Otwórz Spotify i włącz ostatnią piosenkę"*
 - *"Oblicz 50 podzielone na 25"*
 
+## Wyniki benchmarku
+
+Pomiar zespołu skryptem `benchmark.py`: 10 komend (po 2 na akcję), liczy się wybór właściwej akcji, czas to średni czas odpowiedzi modelu. Jedno uruchomienie dla każdej temperatury.
+
+| Model | Parametry | Temp. 0: trafność | czas | Temp. 1: trafność | czas |
+|---|---:|---:|---:|---:|---:|
+| qwen2.5:0.5b (używany w aplikacji) | 0,5 mld | 90% | 0,24 s | 80% | 0,21 s |
+| qwen2.5:1.5b | 1,5 mld | 90% | 0,42 s | 80% | 0,32 s |
+| llama3.2:3b | 3,2 mld | 100% | 0,77 s | 100% | 0,53 s |
+
+![Czas odpowiedzi i trafność modeli](docs/latency.png)
+
+Przy 10 komendach jedna pomyłka to 10 punktów procentowych, więc różnice 80–90% są w granicach jednego polecenia.
+
+## Prezentacja
+
+- [docs/prezentacja.pdf](docs/prezentacja.pdf) – 10 slajdów
+- [docs/prezentacja.pptx](docs/prezentacja.pptx) – te same slajdy w PowerPoincie
+
 ## Użycie AI w procesie tworzenia projektu
 
 Koncepcja projektu, dobór funkcjonalności, zaprojektowanie logiki działania oraz eksperymenty z lokalnymi modelami językowymi zostały opracowane samodzielnie przez zespół. 
