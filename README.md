@@ -2,6 +2,10 @@
 
 Lokalny asystent głosowy do sterowania komputerem z systemem Windows, działający offline. Projekt wykorzystuje lokalne rozpoznawanie mowy (Whisper) oraz mały model językowy (LLM) uruchamiany lokalnie przez Ollamę do zamiany poleceń głosowych na konkretne akcje w systemie.
 
+## Demo
+
+Zobacz, jak działa projekt na filmie: [Demonstracja działania](https://nextcloud.nomysz.pl/index.php/s/g7tTEE7tC4pbKno?dir=/&editing=false&openfile=true)
+
 ## Funkcje
 - **Przeglądarka:** Wyszukiwanie haseł w Google oraz odtwarzanie treści na YouTube.
 - **Notatki:** Szybkie otwieranie Notatnika i dyktowanie notatek (z obsługą polskich znaków).
