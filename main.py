@@ -27,6 +27,7 @@ Zasady:
 - Jesli polecenie nie pasuje do zadnej z powyzszych kategorii, zawsze zwroc akcje "niezrozumiale".
 - Jesli uzytkownik nie poda konkretnej strony, domyslnie wpisz Google.
 - W polu "wyrazenie" podaj TYLKO samo dzialanie matematyczne, NIGDY nie dopisuj znaku "=" ani wyniku.
+- W polu "tresc" (dla notatki) oraz "szukaj" przekopiuj DOKLADNIE slowa uzytkownika, nie zmieniaj ich i nie dopisuj nic od siebie.
 
 Przyklady:
 Uzytkownik: "Odpal na YouTube muzyke zespolu Queen"
@@ -83,6 +84,7 @@ def GetJSONFromPrompt(text):
     response = ollama.chat(
         model = llmModel,
         format = "json",
+        options={"temperature": 0},
         messages = [
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": text}
