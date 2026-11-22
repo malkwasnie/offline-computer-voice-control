@@ -2,7 +2,6 @@
 
 Lokalny asystent głosowy do sterowania komputerem z systemem Windows, działający offline. Projekt wykorzystuje lokalne rozpoznawanie mowy (Whisper) oraz mały model językowy (LLM) uruchamiany lokalnie przez Ollamę do zamiany poleceń głosowych na konkretne akcje w systemie.
 
-## Demo
 
 ## Demo
 
