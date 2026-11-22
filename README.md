@@ -4,7 +4,10 @@ Lokalny asystent głosowy do sterowania komputerem z systemem Windows, działaj�
 
 ## Demo
 
-Zobacz, jak działa projekt na filmie: [Demonstracja działania](https://nextcloud.nomysz.pl/index.php/s/g7tTEE7tC4pbKno?dir=/&editing=false&openfile=true)
+## Demo
+
+[![Demonstracja działania](demo.jpg)](https://nextcloud.nomysz.pl/index.php/s/g7tTEE7tC4pbKno?dir=/&editing=false&openfile=true)
+
 
 ## Funkcje
 - **Przeglądarka:** Wyszukiwanie haseł w Google oraz odtwarzanie treści na YouTube.
