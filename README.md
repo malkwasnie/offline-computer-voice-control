@@ -53,3 +53,14 @@ W trakcie prac wykorzystaliśmy **Gemini** jako wsparcie techniczne w celu:
 - **optymalizacji prompt engineeringu** (*few-shot prompting*) pod kątem małych modeli językowych (0.5B–1.5B parametrów),
 - **przyspieszenia nauki nowych narzędzi** i dobrych praktyk pracy z repozytorium Git.
 - **dokonanie testów** i napisanie kodu odpowiedzialnego za porównanie trzech modeli
+
+
+## Porownanie modeli z różną liczbą parametrów
+
+Dla temperatury = 0
+![alt text](image.png)
+
+Dla temperatury = 1
+![alt text](image-1.png)
+
+Jak widać, model z największą ilością parametrów najlepiej rozpoznaje polecenia
